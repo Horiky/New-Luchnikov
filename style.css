@@ -1,0 +1,248 @@
+body {
+  background: url(./img/FonesBlack.png) no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Навигация */
+.navigation {
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
+  padding-left: 50px;
+  position: relative;
+  width: 600px;
+}
+
+.note {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 2rem;
+  transition: transform 0.5s ease;
+}
+
+.note:hover {
+  transform: rotate(360deg);
+}
+
+nav a {
+  color: rgba(192, 192, 192, 0.8);
+  text-decoration: none;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0.8rem 1.5rem;
+  margin: 0 0.5rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: rgb(121, 121, 121);
+  transform: translateY(-3px);
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(255, 0, 0);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.home {
+  font-weight: bold;
+}
+
+/* Заголовок */
+h1 {
+  margin: 0;
+  color: #f8f8f8;
+  font-size: 6rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  line-height: 1.1;
+}
+
+.musican {
+  color: rgba(134, 134, 134, 0.9);
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  margin-top: 1rem;
+}
+
+.line {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+}
+
+.family {
+  border: 3px solid rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  color: white;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+/* Основная структура */
+.names {
+  gap: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5vw;
+}
+
+.foto {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.foto img {
+  width: 80%;
+  max-width: 100%;
+  height: auto;
+  animation-name: Appearance;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(.1,-.6,.2,0);
+}
+
+@keyframes Appearance {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+/* Иконки для ПК */
+.desktop-icons {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1.5rem;
+  padding-left: 1rem;
+}
+
+/* Иконки для мобильных */
+.mobile-icons {
+  display: none;
+}
+
+.icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: 0 1rem;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+}
+
+.icone {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 1rem;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  padding-bottom: 10px;
+}
+
+.icone:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+}
+
+@media (max-width: 1000px) {
+  h1 {
+    font-size: 3rem;
+    padding-top: 20px;
+  }
+  
+  .names {
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+  }
+  
+  .foto {
+    order: 1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .foto img {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding-right: 35px;
+  }
+  
+  .name {
+    order: 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .desktop-icons {
+    display: none;
+  }
+  
+  .mobile-icons {
+    order: 2;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem 0;
+  }
+  
+  .navigation {
+    width: 100%;
+    padding-left: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  nav a {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    margin: 0.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .foto img {
+    max-width: 100%;
+  }
+  
+  .icon, .icone {
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  .icone {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  
+  nav a {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
