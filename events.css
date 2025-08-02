@@ -255,6 +255,10 @@ article:hover {
   nav a {
     font-size: 1rem;
     padding: 0.4rem 0.8rem;
+   
+  }
+  .note{
+   margin-right: 0;
   }
   
   .button {
