@@ -255,10 +255,12 @@ article:hover {
   nav a {
     font-size: 1rem;
     padding: 0.4rem 0.8rem;
-   
+    margin: 0;
   }
   .note{
    margin-right: 0;
+   width: 20px;
+   height: 20px;
   }
   
   .button {
@@ -277,3 +279,6 @@ article:hover {
   
 
 }
+
+}
+
